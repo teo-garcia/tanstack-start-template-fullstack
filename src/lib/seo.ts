@@ -5,7 +5,7 @@ const publicUrl = env.publicUrl.replace(/\/$/, '')
 export const siteMetadata = {
   description:
     'Production-ready TanStack Start template with server rendering, theme support, health checks, tests, and Docker defaults.',
-  name: 'React Template TanStack Start',
+  name: 'TanStack Start Template Fullstack',
   shortName: 'RTTS',
   url: publicUrl,
 } as const

@@ -67,7 +67,7 @@
   "msw": {
     "workerDirectory": "public"
   },
-  "name": "react-template-tanstack-start",
+  "name": "tanstack-start-template-fullstack",
   "private": true,
   "scripts": {
     "analyze": "ANALYZE=true vite build",
