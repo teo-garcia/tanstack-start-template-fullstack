@@ -1,15 +1,20 @@
 import { useQuery } from '@tanstack/react-query'
-import { createServerFn } from '@tanstack/react-start'
 
-import { createHealthyHealthResponse, parseHealthResponse } from '~/lib/health'
+import { parseHealthResponse } from '~/lib/health'
 
-const getHealth = createServerFn({ method: 'GET' }).handler(() => {
-  return createHealthyHealthResponse()
-})
+const fetchHealth = async () => {
+  const response = await fetch('/api/health')
+
+  if (!response.ok) {
+    throw new Error(`Health request failed with status ${response.status}`)
+  }
+
+  return parseHealthResponse(await response.json())
+}
 
 export const useHealthcheck = () => {
   return useQuery({
-    queryFn: async () => parseHealthResponse(await getHealth()),
+    queryFn: fetchHealth,
     queryKey: ['health'],
   })
 }
