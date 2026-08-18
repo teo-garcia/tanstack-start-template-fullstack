@@ -1,6 +1,6 @@
 <div align="center">
 
-# TanStack Start Template Fullstack
+# TanStack Template Fullstack
 
 **Production-ready TanStack Start starter with TypeScript, Tailwind CSS, and
 modern testing**
@@ -135,7 +135,7 @@ preload policy belong to the hosting layer.
 | --------------------------------- | --------------------------- |
 | `next-template-fullstack`         | Next.js full-stack app      |
 | `react-router-template-fullstack` | React Router full-stack app |
-| `react-native-template-expo`      | Expo mobile app             |
+| `expo-template-mobile`            | Expo mobile app             |
 | `nest-template-monolith`          | NestJS backend              |
 | `nest-template-microservice`      | NestJS microservice         |
 | `fastapi-template-monolith`       | FastAPI backend             |
