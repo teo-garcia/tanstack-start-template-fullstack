@@ -6,7 +6,7 @@ import { getSeoMeta, siteMetadata } from '~/lib/seo'
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: getSeoMeta({
-      title: `Home | ${siteMetadata.shortName}`,
+      title: `${siteMetadata.shortName} | Home`,
     }),
   }),
   component: HomePage,

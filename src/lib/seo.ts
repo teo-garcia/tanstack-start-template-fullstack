@@ -6,7 +6,7 @@ export const siteMetadata = {
   description:
     'Production-ready TanStack Start template with server rendering, theme support, health checks, tests, and Docker defaults.',
   name: 'TanStack Start Template Fullstack',
-  shortName: 'RTTS',
+  shortName: 'TTF',
   url: publicUrl,
 } as const
 
@@ -17,7 +17,7 @@ export const getCanonicalUrl = (path = '/') => {
 export const getSeoMeta = ({
   description = siteMetadata.description,
   path = '/',
-  title = siteMetadata.name,
+  title = siteMetadata.shortName,
 }: {
   description?: string
   path?: string

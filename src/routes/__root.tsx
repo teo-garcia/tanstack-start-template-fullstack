@@ -8,6 +8,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { ThemeProvider } from 'better-themes'
 
 import { GlobalProviders } from '~/components/global-providers/global-providers'
+import { HealthStatus } from '~/components/health-status/health-status'
 import {
   RouteLoadingState,
   RouteNotFoundState,
@@ -73,6 +74,7 @@ function RootDocument({
               <main id='main-content'>{children}</main>
             </div>
             <ThemeSwitch />
+            <HealthStatus />
           </GlobalProviders>
         </ThemeProvider>
         <TanStackRouterDevtools position='top-left' />
@@ -87,7 +89,7 @@ function ErrorComponent({
   reset,
 }: Readonly<{ error: Error; reset: () => void }>) {
   return (
-    <RootDocument title={`Something went wrong | ${siteMetadata.shortName}`}>
+    <RootDocument title={`${siteMetadata.shortName} | Something went wrong`}>
       <RouteState
         actions={<RouteStateButton onClick={reset}>Try again</RouteStateButton>}
         description={error.message || 'The current route failed to render.'}
@@ -101,7 +103,7 @@ function ErrorComponent({
 
 function NotFoundComponent() {
   return (
-    <RootDocument title={`Page not found | ${siteMetadata.shortName}`}>
+    <RootDocument title={`${siteMetadata.shortName} | Page not found`}>
       <RouteNotFoundState />
     </RootDocument>
   )
